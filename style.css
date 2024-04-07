@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* font-family: "Roboto Mono", monospace; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-image: linear-gradient(to top, black, gray, white, gray, black); */
+    background: black;
+}
+
+.container{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.float{
+    animation: flutuar 5s infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        transform: translateY(10px) scale(1);
+    }
+    100%{
+        transform: translateY(-10px) scale(.98);
+    }
+}
+
+
+.box{
+    position: relative;
+    width: 600px;
+    height: 400px;
+    /* background-color: black; */
+    background: url(https://images.pexels.com/photos/16841305/pexels-photo-16841305/free-photo-of-natureza-agua-grama-orvalho.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1) no-repeat center bottom;
+    background-size: 100%;
+    box-shadow: ins 0px 0px 25px 5px black;
+    border-radius: 10px;
+    transition: background 1s ease-in-out;
+}
+
+
+.box:hover{
+    background-position: 80% 20%;
+    background-size: 110%;
+}
+
+
+.box::before, .box::after{
+    position: absolute;
+    content: "";
+    top: -10px;
+    left: -10px;
+    background: conic-gradient(from var(--fundo),#9900c9,#ff0000,#f0ff00,#0fff00,#0046ce,#9900c9);
+    background-size: 100%;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border-radius: inherit;
+    z-index: -1;
+    box-shadow: 0px 0px 10px black;
+    animation: rainbow 2s linear infinite;
+}
+
+.box::after{
+    filter: blur(20px);
+}
+
+@property --fundo {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes rainbow{
+    0%{
+        --fundo: 0deg;
+    }
+    100%{
+        --fundo: 360deg;
+    }
+}
+
+
+.relogio{
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: "Roboto Mono", monospace;
+}
+
+.rd{
+    position: absolute;
+    top: 30px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    font-weight: 800;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0004);
+    line-height: .7;
+    color: #0e3742;
+    outline: none;
+    letter-spacing: 5px;
+    animation: texto 5s linear infinite alternate;
+}
+
+@keyframes texto{
+    0%, 50%{
+        color: lightgreen;
+        text-shadow: none;
+    }
+
+    75%,100%{
+        color: white;
+        text-shadow: 0 0 10px #03bcf4,
+                0 0 20px #03bcf4,
+                0 0 40px #03bcf4,
+                0 0 80px #03bcf4,
+                0 0 160px #03bcf4;
+    }
+}
+
+.horas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;   
+}
+
+span{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    /* box-shadow: 0px 0px 5px #ffffff15, inset 0px 0px 5px #ffffff15; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5em;
+    z-index: 11;
+    font-weight: 900;
+    text-shadow: 0px 0px 40px black;
+}
+
+
+span::before{
+    position: absolute;
+    content: "";
+    inset: 0px;
+    opacity: .1;
+    filter: blur(0px);
+    background-size: 300%;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.dt{
+    position: absolute;
+    bottom: 30px;
+    font-size: 2em;
+    font-weight: 900;
+    letter-spacing: 0px;
+    text-shadow: 0px 0px 50px white;
+    color: white;
+}
+
+
+
+
+
