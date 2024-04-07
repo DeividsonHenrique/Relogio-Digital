@@ -2,7 +2,7 @@
 
 <p style="text-align:center">Criei esse simples projeto de um relógio automático com muitas cores e efeitos usando HTML5, Css e JavaScript.</p>
 
-<a href="https://deividsonhenrique.github.io/Relogio-Digital/">Link do Projeto Relógio automático</a>
+<a href="https://deividsonhenrique.github.io/Relogio-Digital/" target="_blank">Link do Projeto Relógio automático</a>
 
 ![Captura de tela 2024-04-06 235202](https://github.com/DeividsonHenrique/Relogio-Digital/assets/109252541/57271133-84ce-40b1-93b3-384bb2371127)
 
