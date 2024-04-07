@@ -8,7 +8,7 @@ function mostrarData(){
     let diaDaSemana = ['Domingo','Segunda-Feira','Terça-Feira','Quarta-Feira','Quinta-Feira','Sexta-Feira','Sábado',]
     let mesAtual = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
     let diaAtual = diaDaSemana[dataAtual.getDay()]
-    let dia = dataAtual.getDay()
+    let dia = dataAtual.getDate()
     let mes = mesAtual[dataAtual.getMonth()]
     let ano = dataAtual.getFullYear()
 
