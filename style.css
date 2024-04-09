@@ -20,6 +20,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 }
 
 .float{
@@ -167,7 +168,7 @@ span::before{
 .dt{
     position: absolute;
     bottom: 30px;
-    font-size: 2em;
+    font-size: 1.65em;
     font-weight: 900;
     letter-spacing: 0px;
     text-shadow: 0px 0px 50px white;
