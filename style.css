@@ -175,7 +175,9 @@ span::before{
     color: white;
 }
 
-
+p::selection {
+    background: red;
+}
 
 
 
